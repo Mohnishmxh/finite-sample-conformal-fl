@@ -17,7 +17,7 @@ Repository Structure
 │── results/             # Raw JSON checkpoints and summary_results.csv
 └── README.md
 
-==============================================================================================================
+------------------------------------------------------------------------------------------------------------------------
 Experimental Tracks (E1–E7)
 
 The experimental testbed evaluates 7 complementary tracks across 10 random seeds and 100 client evaluations[cite: 4]:
@@ -36,7 +36,7 @@ E6 (Feature Ablation Study): Evaluates macro F1 after removing voltage, temporal
 
 E7 (Software Overhead Profiling): Measures on-device verification execution latency (ms) and peak heap memory footprint (KB) against local SGD training[cite: 4].
 
-======================================================================================================================
+----------------------------------------------------------------------------------------------------------------------------------------------------
 Validated 10-Seed Summary Results
 
 The table below summarizes the multi-seed experimental outcomes ($N=10$ seeds, $N=100$ client runs)[cite: 4]:
@@ -61,7 +61,8 @@ E7,Gate Verification Latency[cite: 4],Latency (ms)[cite: 4],0.77[cite: 4],0.52[c
 E7,Local FL Training (3 Epochs)[cite: 4],Latency (ms)[cite: 4],310.01[cite: 4],88.59[cite: 4],±54.91[cite: 4]
 E7,Gate Peak Heap Memory[cite: 4],Heap (KB)[cite: 4],439.5[cite: 4],0.02[cite: 4],±0.01[cite: 4]
 E7,Training Peak Heap Memory[cite: 4],Heap (KB)[cite: 4],168.9[cite: 4],2.17[cite: 4],±1.34[cite: 4]
-============================================================================================================================
+
+---------------------------------------------------------------------------------------------------------------------------
 
 Artifact Descriptions
 
@@ -78,7 +79,8 @@ fig5_e5_heterogeneity.png (Figure 5): Gate robustness across hardware variations
 fig6_e6_ablation_study.png (Figure 6): Feature ablation analysis confirming that Joule heating ($I^2 R_w$) is the indispensable grounding signal[cite: 4]. Removing voltage or temporal differences incurs $<0.15\%$ change, whereas excluding current drops macro F1 to $0.177$[cite: 4].
 
 fig7_e7_overhead.png (Figure 7): Microcontroller overhead profile[cite: 4]. Highlights that execution latency is negligible ($0.77\text{ ms}$, $0.26\%$ of training time), while sliding-window buffering introduces a $2.6\times$ peak heap RAM footprint[cite: 4].
-===================================================================================================================================
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Data & Simulation Provenance
 
