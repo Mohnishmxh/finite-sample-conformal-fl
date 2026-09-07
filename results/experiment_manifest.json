@@ -1,0 +1,48 @@
+{
+    "framework_name": "Finite-Sample Conformal Cross-Modal Verification",
+    "version": "2.0",
+    "seeds": [
+        42,
+        101,
+        202,
+        303,
+        404,
+        505,
+        606,
+        707,
+        808,
+        909
+    ],
+    "n_seeds": 10,
+    "raw_samples": 5000,
+    "aligned_samples": 4999,
+    "num_clients": 10,
+    "num_rounds": 20,
+    "local_epochs": 3,
+    "learning_rate": 0.01,
+    "alpha": 0.05,
+    "byzantine_f": 2,
+    "tier1_attacks": [
+        "gaussian_noise",
+        "bias_injection",
+        "desynchronize_current"
+    ],
+    "tier2_attacks": [
+        "sign_flip",
+        "scaling",
+        "additive_noise",
+        "zero"
+    ],
+    "ablations": [
+        "full_cross_modal",
+        "missing_current",
+        "missing_voltage",
+        "no_temporal_lag",
+        "single_modal_ar"
+    ],
+    "normalization": "global training-only standardization",
+    "fl_update_type": "parameter_delta",
+    "krum_requirement": "N >= 2f + 3",
+    "temporal_partition": true,
+    "conformal_exchangeability_caveat": true
+}

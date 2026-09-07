@@ -1,0 +1,41 @@
+{
+    "project": "Finite-Sample Conformal Cross-Modal Verification",
+    "seeds": [
+        42,
+        101,
+        202,
+        303,
+        404,
+        505,
+        606,
+        707,
+        808,
+        909
+    ],
+    "n_seeds": 10,
+    "raw_samples": 5000,
+    "aligned_samples": 4999,
+    "clients": 10,
+    "fl_rounds": 20,
+    "local_epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 0.01,
+    "alpha": 0.05,
+    "byzantine_f": 2,
+    "alignment": "X[j]=[V[j+1], I[j+1], T[j]], y[j]=T[j+1]",
+    "normalization": "training-only global standardization",
+    "fl_aggregation": "complete client update vectors",
+    "krum_requirement": "N >= 2f + 3",
+    "tier1_attacks": [
+        "gaussian_noise",
+        "bias_injection",
+        "desynchronize_current"
+    ],
+    "tier2_attacks": [
+        "sign_flip",
+        "scaling",
+        "additive_noise",
+        "zero"
+    ],
+    "conformal_note": "The finite-sample order statistic is implemented, but formal distribution-free coverage requires the relevant exchangeability assumption. Temporal dependence can invalidate that guarantee."
+}
